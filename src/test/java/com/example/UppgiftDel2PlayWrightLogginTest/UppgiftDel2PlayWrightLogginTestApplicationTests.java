@@ -13,7 +13,10 @@ class UppgiftDel2PlayWrightLogginTestApplicationTests {
 	@Test
 	void testLoginPage() {
 		try (Playwright playwright = Playwright.create()) {
-			Browser browser = playwright.chromium().launch();
+			Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+					.setHeadless(false)
+					.setSlowMo(1000)
+			);
 			Page page = browser.newPage();
 
 			page.navigate("https://www.saucedemo.com/");
