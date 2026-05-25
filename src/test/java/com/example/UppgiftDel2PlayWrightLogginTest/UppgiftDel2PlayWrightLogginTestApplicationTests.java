@@ -14,8 +14,8 @@ class UppgiftDel2PlayWrightLogginTestApplicationTests {
 	void testLoginPage() {
 		try (Playwright playwright = Playwright.create()) {
 			Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-					.setHeadless(false)
-					.setSlowMo(1000)
+					//.setHeadless(false)
+					//.setSlowMo(1000)
 			);
 			Page page = browser.newPage();
 
